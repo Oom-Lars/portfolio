@@ -122,7 +122,7 @@
       .chip{background:#eef3fb;border-color:#d7dee8}
       .main h2{color:#0b1220}
       .main h2::after,.side h3{border-color:#d7dee8}
-      .role li::before,.role .pos,.pos{color:#0b1220}
+      .role li::before,.role .pos,.pos,.proj-line .pt,.skill-block .lab,.edu-item .deg{color:#0b1220}
       .edit{display:none!important}
       *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
     }
@@ -167,8 +167,8 @@
       <div class="skill-block">
         <div class="lab">Languages &amp; Frameworks</div>
         <div class="chips">
-          <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span>
-          <span class="chip">C# / .NET</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Python</span>
+          <span class="chip">C# / .NET</span><span class="chip">Entity Framework</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span>
+          <span class="chip">SQL / MySQL</span><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">CSS</span>
         </div>
       </div>
       <div class="skill-block">
@@ -195,13 +195,13 @@
 
       <h3>Education</h3>
       <div class="edu-item">
-        <div class="deg">Tertiary studies <span class="edit">BSC in Informatics</span></div>
+        <div class="deg">BSc in Informatics — did not complete</div>
         <div class="org">University of South Africa (UNISA)</div>
-        <div class="yr">Completed to third year</div>
+        <div class="yr">Studied toward the degree; left during third year</div>
       </div>
       <div class="edu-item">
         <div class="deg">National Senior Certificate (Matric)</div>
-        <div class="org"><span class="edit">Highschool Swartland</span></div>
+        <div class="org">Highschool Swartland</div>
       </div>
       <p class="note">Largely self-taught — most of my skills were built hands-on and on the job.</p>
 
@@ -217,7 +217,7 @@
     <main class="main">
       <div class="section">
         <h2>Profile</h2>
-        <p class="summary">Junior Software Engineer with a full-stack background and a growing focus on applying AI to real engineering work. Comfortable across the stack — C#/.NET and SQL, learning React/TypeScript with AI — and increasingly across DevOps and cloud, including AWS, Huawei Cloud, Kubernetes and CI/CD. I pick things up quickly, adapt easily to new tools and domains, and get productive fast. Most of my growth has come from solving real problems on the job rather than from a classroom.</p>
+        <p class="summary">Software Engineer with 2.5 years building and shipping production systems, with C# / .NET at the core of nearly every project — enterprise ERP services, third-party integrations, call-centre tooling, and full-stack web apps (React / TypeScript, SQL / MySQL). Increasingly strong across DevOps and cloud (AWS, Huawei Cloud, Kubernetes, CI/CD), and I've spearheaded how my team adopts AI safely in day-to-day engineering. I pick things up quickly, adapt easily to new tools and domains, and get productive fast — most of my growth has come from solving real problems on the job rather than from a classroom.</p>
       </div>
 
       <div class="section">
@@ -230,11 +230,16 @@
           </div>
           <div class="org">Enterprise ERP Platform · Cape Town · Full-time</div>
           <ul>
-            <li>Full-stack development and DevOps across a large microservice ERP estate.</li>
-            <li>Started and proof-of-concepted an AI-driven approach to convert legacy Delphi applications into modern React; delivered the Fulfilment Returns rebuild end-to-end into production, improving functionality and maintainability significantly.</li>
+            <li>Build and ship production features on C# / .NET across a large microservice ERP estate, plus full-stack React and the DevOps behind it.</li>
+            <li>Spent the first ~6 months on support, eagerly taking on any ticket that came up to learn the business's systems end-to-end while fixing bugs and resolving queries.</li>
+            <li>Grew into the fulfilment/logistics side of the business — learning the ins and outs of the warehouse systems and becoming domain owner of the fulfilment system (primarily Delphi and .NET / C# WinForms).</li>
+            <li>Solo-delivered the Fulfilment despatch/returns rebuild with AI as a pair — a C# / .NET backend integrating with on-prem Omega SQL systems and a React front end — taking a legacy Delphi flow to production and improving functionality and maintainability significantly.</li>
+            <li>Helped bring Electron into the tech stack so React applications could be launched from Delphi; used it in the Fulfilment autonomous returns project to open the Returns app inside Omega, passing through the agent's existing Delphi login automatically. Focused on seamless integration and built-in rulesets to minimise user error, with self-explanatory error catching and logging that even call-centre agents can understand and report.</li>
+            <li>Led the .NET backend integration for Credico, a third-party point-of-sale sales integration, with a teammate — work that earned the staff award for most innovative and success-driven team.</li>
+            <li>Delivered the TT1 debit-order mandate changes in a legacy C# call-centre system, integrating new systems and rule changes to move mandate setup from manual to automated (~2 months).</li>
             <li>Contributed to migrating 80+ services from AWS EKS to Huawei Cloud (CCE) using a dual-deployment model with reusable CI/CD workflows, image mirroring, ingress and DNS cutover, and rollback planning.</li>
-            <li>Built a suite of custom AI agent skills and a multi-agent development pipeline (research &rarr; code &rarr; review &rarr; documentation) now used by the team.</li>
-            <li>Diagnosed and resolved complex production incidents across databases, Kubernetes and networking, recording each fix as reusable knowledge.</li>
+            <li>Spearheaded AI adoption: built custom agent skills, a multi-agent development pipeline (research &rarr; code &rarr; review &rarr; documentation), and an internal knowledge site with governance and best practices.</li>
+            <li>Diagnosed and resolved complex production incidents across .NET services, databases, Kubernetes and networking, recording each fix as reusable knowledge.</li>
           </ul>
         </div>
 
@@ -264,15 +269,16 @@
 
       <div class="section">
         <h2>Selected Projects</h2>
-        <div class="proj-line"><span class="pt">Delphi &rarr; React Modernisation (flagship).</span> <span class="pd">Initiated and proof-of-concepted converting legacy Delphi software to React with AI; delivered the Fulfilment Returns rebuild into production.</span></div>
-        <div class="proj-line"><span class="pt">AI Automation Skill Suite.</span> <span class="pd">A set of custom agent skills that encode team standards and automate high-volume platform work such as Kubernetes-to-Helm conversion, scaffolding and workflow generation.</span></div>
+        <div class="proj-line"><span class="pt">Fulfilment Returns — autonomous returns flow (flagship, solo).</span> <span class="pd">Rewrote a heavily manual Delphi returns process into a modern, largely autonomous flow: order eligibility filtering, management override, refund/replace rulesets, and store or Pargo drop-off, with a summary sent to a third-party partner that returns a courier waybill. I built the C# / .NET backend over on-prem Omega SQL and used AI to build the React front end against it.</span></div>
+        <div class="proj-line"><span class="pt">Credico — POS sales integration (award-winning).</span> <span class="pd">Led the C# / .NET backend integration for a third-party point-of-sale system that let sales be captured outside the showroom around legacy/network constraints. Earned the staff award for most innovative and success-driven team.</span></div>
+        <div class="proj-line"><span class="pt">TT1 Debit Order Mandate.</span> <span class="pd">Integrated new systems and rule changes into a legacy C# call-centre system to move debit-order mandate setup from manual to automated (~2 months, team effort).</span></div>
+        <div class="proj-line"><span class="pt">chkin.co.za — digital patient intake (personal, live).</span> <span class="pd">Built the framework and system (React + TypeScript, C# / .NET, MySQL) for QR-based automatic form completion, visit history, statistics and patient–practitioner consent management; now onboarding real clients.</span></div>
+        <div class="proj-line"><span class="pt">AI Automation Skill Suite &amp; pipeline.</span> <span class="pd">Custom agent skills that encode team standards and automate high-volume platform work (Kubernetes-to-Helm conversion, scaffolding, workflow generation), plus a spec-driven research → code → review → docs pipeline with human review at the diff level.</span></div>
         <div class="proj-line"><span class="pt">Enterprise Dual-Cloud Migration.</span> <span class="pd">Helped move an ERP estate from AWS EKS to Huawei Cloud with reusable workflows, image mirroring and DNS/TLS cutover across 80+ repositories.</span></div>
-        <div class="proj-line"><span class="pt">Multi-Agent Development Pipeline.</span> <span class="pd">A spec-driven pipeline where research, coding, review and documentation agents hand off in sequence with human review at the diff level.</span></div>
-        <div class="proj-line"><span class="pt">Automated Documentation Platform.</span> <span class="pd">An AI-driven system that generates architecture, module and runbook docs from a service's current state and keeps them in sync through CI.</span></div>
       </div>
     </main>
   </div>
 
-  <footer>Bertus Mitchell — Curriculum Vitae · Update the fields marked EDIT before sending.</footer>
+  <footer>Bertus Mitchell — Curriculum Vitae</footer>
 </body>
 </html>

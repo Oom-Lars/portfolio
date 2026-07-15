@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bertus Mitchell — Junior Software Engineer</title>
-  <meta name="description" content="Bertus Mitchell — Junior Software Engineer. Full-stack development, DevOps, and building AI into everyday engineering work." />
+  <title>Bertus Mitchell — Software Engineer</title>
+  <meta name="description" content="Bertus Mitchell — Software Engineer focused on C# / .NET. Production ERP systems, full-stack delivery, DevOps, and leading AI adoption at work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -180,8 +180,8 @@
     }
     .stage:hover .node{border-color:var(--cyan);transform:translateY(-4px);box-shadow:0 8px 26px rgba(34,211,238,.14)}
     .stage .n{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--cyan);display:block;margin-bottom:6px}
-    .stage .t{font-weight:600;font-size:.98rem}
-    .stage .d{font-size:.78rem;color:var(--dim);margin-top:4px}
+    .stage .t{display:block;font-weight:600;font-size:.98rem}
+    .stage .d{display:block;font-size:.78rem;color:var(--dim);margin-top:4px}
     .arrow{align-self:center;color:var(--blue);font-size:1.3rem;padding:0 4px;flex:0 0 auto}
     @media(max-width:720px){.arrow{transform:rotate(90deg)}.stage{min-width:100%}}
 
@@ -208,6 +208,15 @@
     .proj .metrics div{font-size:.8rem;color:var(--dim)}
     .proj .metrics b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.35rem;color:var(--blue-bright);font-weight:700}
     .proj .stack{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
+    .proj-link{
+      align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;gap:7px;
+      text-decoration:none;font-weight:600;font-size:.88rem;color:var(--text);
+      padding:9px 16px;border-radius:10px;border:1px solid var(--border-strong);
+      background:linear-gradient(135deg,rgba(59,130,246,.18),rgba(34,211,238,.08));transition:.25s;
+    }
+    .proj-link:hover{box-shadow:0 0 20px var(--glow);transform:translateY(-2px)}
+    .proj-link span{transition:transform .25s}
+    .proj-link:hover span{transform:translate(2px,-2px)}
 
     /* ---------- Experience timeline ---------- */
     .timeline{position:relative;margin-top:20px;padding-left:34px}
@@ -283,10 +292,10 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="status-chip reveal"><span class="live"></span> Junior Software Engineer · open to what's next</div>
-    <h1 class="reveal d1">Engineering that thinks<br><span class="grad">with AI, not around it.</span></h1>
+    <div class="status-chip reveal"><span class="live"></span> Software Engineer · .NET · open to what's next</div>
+    <h1 class="reveal d1">I ship real software —<br><span class="grad">.NET at the core, AI as the edge.</span></h1>
     <div class="role reveal d2"><span id="typed"></span><span class="type-cursor">▊</span></div>
-    <p class="lede reveal d3">I'm an intuitive, hard-working engineer who's always eager to learn, whether from the people around me or on my own. I adapt fast and hit the ground running. Right now that means building AI into everyday development work, from full-stack apps to the DevOps behind an enterprise ERP platform.</p>
+    <p class="lede reveal d3">I'm a software engineer with 2.5 years building and shipping production systems, with C# / .NET at the heart of nearly everything I do — from enterprise ERP services and call-centre tooling to full-stack web apps. I pick things up fast and adapt quickly, and I've spearheaded how my team puts AI to work safely, plus the DevOps behind a large ERP platform.</p>
     <div class="hero-cta reveal d4">
       <a href="#projects" class="btn btn-primary">View my work →</a>
       <a href="cv.html" class="btn btn-ghost">View CV</a>
@@ -294,20 +303,26 @@
     </div>
 
     <div class="hero-stats reveal d4">
-      <div class="stat"><div class="num" data-count="84"><span class="plus">+</span></div><div class="label">Repos automated</div></div>
+      <div class="stat"><div class="num">2.5<span class="plus"> yrs</span></div><div class="label">Software engineering</div></div>
+      <div class="stat"><div class="num" data-count="84"><span class="plus">+</span></div><div class="label">Services shipped &amp; migrated</div></div>
       <div class="stat"><div class="num" data-count="12"><span class="plus">+</span></div><div class="label">Custom AI skills built</div></div>
-      <div class="stat"><div class="num" data-count="2"><span class="plus"></span></div><div class="label">Clouds migrated</div></div>
-      <div class="stat"><div class="num" data-count="5"><span class="plus">-stage</span></div><div class="label">Agent pipeline</div></div>
+      <div class="stat"><div class="num" data-count="1"><span class="plus">×</span></div><div class="label">Team innovation award</div></div>
     </div>
   </header>
 
   <!-- APPROACH -->
   <section id="approach">
-    <div class="eyebrow reveal">How I work with AI</div>
-    <h2 class="section-title reveal d1">AI, embedded into the real workflow</h2>
-    <p class="section-intro reveal d2">Prompting a chatbot is easy. The harder, more useful part is getting AI to do real work: encoding our team's standards and hard-won knowledge into agents that run inside the IDE and CI/CD, so the output is consistent and easy to review. That's where I spend my time.</p>
+    <div class="eyebrow reveal">Leading AI at work</div>
+    <h2 class="section-title reveal d1">Bringing AI into the business — the right way</h2>
+    <p class="section-intro reveal d2">Alongside my engineering work I've been spearheading how the business adopts AI: pushing for the right governance and practices, sharing resources, and running an internal knowledge site so the whole team learns to use these tools well. The goal isn't chatbots — it's encoding our standards and hard-won knowledge into agents that do real work inside the IDE and CI/CD, with output that's consistent and easy to review.</p>
 
     <div class="flow-grid">
+      <div class="card flow-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" style="width:26px;height:26px;fill:none;stroke:#60a5fa;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><path d="M17 20v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M23 20v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.5a4 4 0 0 1 0 7"/></svg></div>
+        <h3>AI Enablement &amp; Governance</h3>
+        <p>I champion AI adoption across the business — setting up the right guardrails and practices, and building an internal knowledge site full of guidance on how (and when) to use AI well. Sharing prompts, patterns, and lessons so everyone gets the upside safely, not just the people who were already curious.</p>
+        <div class="tags"><span class="tag">enablement</span><span class="tag">governance</span><span class="tag">knowledge base</span></div>
+      </div>
       <div class="card flow-card reveal">
         <div class="ic"><svg viewBox="0 0 24 24" style="width:26px;height:26px;fill:none;stroke:#60a5fa;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
         <h3>Custom Agent Skills</h3>
@@ -367,10 +382,19 @@
   <section id="skills">
     <div class="eyebrow reveal">Capabilities</div>
     <h2 class="section-title reveal d1">Skills I've honed</h2>
-    <p class="section-intro reveal d2">A blend of applied AI engineering and the platform/DevOps depth to put it into production safely.</p>
+    <p class="section-intro reveal d2">Software engineering first — C# / .NET across every project I ship — backed by full-stack, applied AI, and the platform/DevOps depth to get it into production safely.</p>
 
     <div class="skills-grid">
       <div class="card skill-group reveal">
+        <h3><span class="gic"><svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:#60a5fa;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M14 4l-4 16"/></svg></span> Software Engineering</h3>
+        <div class="skill-row"><div class="top"><span>C# / .NET (core stack)</span><span class="lvl">Advanced</span></div><div class="bar"><span data-w="90"></span></div></div>
+        <div class="skill-row"><div class="top"><span>Entity Framework / data access</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="84"></span></div></div>
+        <div class="skill-row"><div class="top"><span>REST APIs &amp; integrations</span><span class="lvl">Advanced</span></div><div class="bar"><span data-w="86"></span></div></div>
+        <div class="skill-row"><div class="top"><span>React / TypeScript</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="80"></span></div></div>
+        <div class="skill-row"><div class="top"><span>SQL / MySQL · Python · PHP</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="78"></span></div></div>
+      </div>
+
+      <div class="card skill-group reveal d1">
         <h3><span class="gic"><svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:#60a5fa;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span> AI &amp; Agents</h3>
         <div class="skill-row"><div class="top"><span>Claude Code / Agent SDK</span><span class="lvl">Advanced</span></div><div class="bar"><span data-w="95"></span></div></div>
         <div class="skill-row"><div class="top"><span>Prompt &amp; context engineering</span><span class="lvl">Advanced</span></div><div class="bar"><span data-w="92"></span></div></div>
@@ -379,22 +403,13 @@
         <div class="skill-row"><div class="top"><span>LLM evaluation &amp; guardrails</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="80"></span></div></div>
       </div>
 
-      <div class="card skill-group reveal d1">
+      <div class="card skill-group reveal d2">
         <h3><span class="gic"><svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:#60a5fa;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle"><path d="M7 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.3A3.5 3.5 0 0 1 18 18H7z"/></svg></span> Platform &amp; DevOps</h3>
         <div class="skill-row"><div class="top"><span>Kubernetes &amp; Helm</span><span class="lvl">Advanced</span></div><div class="bar"><span data-w="90"></span></div></div>
         <div class="skill-row"><div class="top"><span>GitHub Actions / CI-CD</span><span class="lvl">Advanced</span></div><div class="bar"><span data-w="92"></span></div></div>
         <div class="skill-row"><div class="top"><span>AWS EKS &amp; alt-cloud (CCE)</span><span class="lvl">Advanced</span></div><div class="bar"><span data-w="85"></span></div></div>
         <div class="skill-row"><div class="top"><span>Docker &amp; image pipelines</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="84"></span></div></div>
         <div class="skill-row"><div class="top"><span>Cloud migration</span><span class="lvl">Advanced</span></div><div class="bar"><span data-w="87"></span></div></div>
-      </div>
-
-      <div class="card skill-group reveal d2">
-        <h3><span class="gic"><svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:#60a5fa;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M14 4l-4 16"/></svg></span> Engineering</h3>
-        <div class="skill-row"><div class="top"><span>C# / .NET</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="82"></span></div></div>
-        <div class="skill-row"><div class="top"><span>React / TypeScript</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="78"></span></div></div>
-        <div class="skill-row"><div class="top"><span>Python (automation)</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="80"></span></div></div>
-        <div class="skill-row"><div class="top"><span>PHP</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="74"></span></div></div>
-        <div class="skill-row"><div class="top"><span>SQL / MySQL / RDS</span><span class="lvl">Proficient</span></div><div class="bar"><span data-w="76"></span></div></div>
       </div>
 
       <div class="card skill-group reveal">
@@ -412,33 +427,56 @@
   <section id="projects">
     <div class="eyebrow reveal">Selected work</div>
     <h2 class="section-title reveal d1">Projects &amp; impact</h2>
-    <p class="section-intro reveal d2">A mix of things I've shipped at work, most with AI somewhere in the loop. Details are kept general, but I'm happy to walk through specifics.</p>
+    <p class="section-intro reveal d2">Production work I've shipped — nearly all of it built on C# / .NET, some with AI in the loop. Details are kept general, but I'm happy to walk through specifics.</p>
 
     <div class="projects-grid">
       <div class="card proj reveal">
-        <div class="head"><span class="pnum">PROJECT 01</span><span class="pill">Flagship · AI + Full-stack</span></div>
-        <h3>Delphi → React, rebuilt with AI</h3>
-        <p>I started and proof-of-concepted a way to convert our legacy Delphi software into modern React using AI. We began with Omega, our legacy program, and I then took it end-to-end on the Fulfilment Returns project: originally written in Delphi, converted to React, improved it tenfold along the way, and got it into production.</p>
+        <div class="head"><span class="pnum">PROJECT 01</span><span class="pill">Flagship · .NET + React · Solo</span></div>
+        <h3>Fulfilment Returns — a new autonomous returns flow</h3>
+        <p>I solo-built this end-to-end, rewriting a heavily manual Delphi returns process into a modern, largely autonomous flow. An agent searches a customer number, picks an order, and the screen auto-filters to eligible orders — showing the return eligibility period, with a management override I lifted from the Delphi logic and rebuilt in .NET. From there they choose a reason and method (refund or replace, each with its own backend ruleset) and a drop-off point (a HomeChoice store or any Pargo location). A summary is sent to our third-party partner, which integrates with the couriers and returns a waybill to initiate the return. I built the C# / .NET backend methods over our on-prem Omega SQL systems and used AI to help build the React front end against them — and owned the gnarly parts, like an EF navigation bug that silently skipped inserts and stalled the "Receive Waybill" step.</p>
         <div class="metrics">
-          <div><b>10×</b>improved</div>
-          <div><b>live</b>in production</div>
+          <div><b>manual→auto</b>returns</div>
+          <div><b>solo</b>+ AI</div>
+          <div><b>live</b>in prod</div>
         </div>
-        <div class="stack"><span class="tag">Delphi</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">AI-assisted</span></div>
+        <div class="stack"><span class="tag">C# / .NET</span><span class="tag">Entity Framework</span><span class="tag">React</span><span class="tag">SQL Server</span><span class="tag">Pargo / courier API</span></div>
       </div>
 
       <div class="card proj reveal d1">
-        <div class="head"><span class="pnum">PROJECT 02</span><span class="pill">AI + Platform</span></div>
+        <div class="head"><span class="pnum">PROJECT 02</span><span class="pill">.NET Integration · Award-winning</span></div>
+        <h3>Credico — POS Sales Integration</h3>
+        <p>A third-party point-of-sale integration that let us capture sales outside the showroom, working around the network and legacy-system constraints that had held sales back. I led the .NET backend integration alongside a teammate. The project's success earned our team the staff award for most innovative and success-driven team.</p>
+        <div class="metrics">
+          <div><b>🏆</b>staff award</div>
+          <div><b>3rd-party</b>POS</div>
+        </div>
+        <div class="stack"><span class="tag">C# / .NET</span><span class="tag">API integration</span><span class="tag">POS</span><span class="tag">teamwork</span></div>
+      </div>
+
+      <div class="card proj reveal d2">
+        <div class="head"><span class="pnum">PROJECT 03</span><span class="pill">.NET · Legacy modernisation</span></div>
+        <h3>TT1 Debit Order Mandate</h3>
+        <p>A team effort to replace the old manual debit-order process — one that couldn't set up a customer's debit order automatically and leaned heavily on manual intervention. I worked in our legacy C# system used by call-centre agents, integrating the new systems, requirements, and rule changes. The project spanned around two months.</p>
+        <div class="metrics">
+          <div><b>~2 mo</b>delivery</div>
+          <div><b>manual→auto</b>mandates</div>
+        </div>
+        <div class="stack"><span class="tag">C#</span><span class="tag">legacy systems</span><span class="tag">call centre</span><span class="tag">payments</span></div>
+      </div>
+
+      <div class="card proj reveal">
+        <div class="head"><span class="pnum">PROJECT 04</span><span class="pill">AI + Platform</span></div>
         <h3>AI Automation Skill Suite</h3>
-        <p>A set of custom agent skills that hold our engineering standards and take on the repetitive platform work: Kubernetes to Helm conversion, service scaffolding, and workflow generation. It lets a small team move a lot faster without cutting corners.</p>
+        <p>A set of custom agent skills that hold our engineering standards and take on the repetitive platform work: Kubernetes to Helm conversion, service scaffolding, and workflow generation. It lets a small team move a lot faster without cutting corners. I also built a spec-driven research → code → review → docs pipeline so AI output is something you can actually rely on.</p>
         <div class="metrics">
           <div><b>12+</b>custom skills</div>
           <div><b>10×</b>faster scaffolding</div>
         </div>
-        <div class="stack"><span class="tag">Claude Code</span><span class="tag">Helm</span><span class="tag">GitHub Actions</span></div>
+        <div class="stack"><span class="tag">Claude Code</span><span class="tag">Agent SDK</span><span class="tag">Helm</span><span class="tag">GitHub Actions</span></div>
       </div>
 
-      <div class="card proj reveal d2">
-        <div class="head"><span class="pnum">PROJECT 03</span><span class="pill">Migration</span></div>
+      <div class="card proj reveal d1">
+        <div class="head"><span class="pnum">PROJECT 05</span><span class="pill">Migration</span></div>
         <h3>Enterprise Dual-Cloud Migration</h3>
         <p>Helped migrate an ERP estate from AWS EKS to an alternate cloud with a dual-deployment model across the fleet: reusable workflows, image mirroring, ingress and DNS cutover, and a rollback plan the whole way through.</p>
         <div class="metrics">
@@ -448,37 +486,15 @@
         <div class="stack"><span class="tag">AWS EKS</span><span class="tag">CCE</span><span class="tag">Docker</span><span class="tag">DNS/TLS</span></div>
       </div>
 
-      <div class="card proj reveal">
-        <div class="head"><span class="pnum">PROJECT 04</span><span class="pill">AI Systems</span></div>
-        <h3>Multi-Agent Development Pipeline</h3>
-        <p>A spec-driven pipeline where research, coding, review, and documentation agents each do their part and pass it on, with a person reviewing the diffs. It makes AI output something you can actually rely on for delivery.</p>
-        <div class="metrics">
-          <div><b>5</b>-stage flow</div>
-          <div><b>↓</b>review load</div>
-        </div>
-        <div class="stack"><span class="tag">Agent SDK</span><span class="tag">orchestration</span><span class="tag">.NET / React</span></div>
-      </div>
-
-      <div class="card proj reveal d1">
-        <div class="head"><span class="pnum">PROJECT 05</span><span class="pill">Docs</span></div>
-        <h3>Automated Documentation Platform</h3>
-        <p>An AI-driven docs setup that generates architecture, module, and runbook pages from a service's current state and keeps them in sync through CI. It fixes the usual problem where documentation drifts out of date the moment it's written.</p>
-        <div class="metrics">
-          <div><b>auto</b>-synced</div>
-          <div><b>MkDocs</b>themed</div>
-        </div>
-        <div class="stack"><span class="tag">MkDocs</span><span class="tag">CI sync</span><span class="tag">Markdown</span></div>
-      </div>
-
       <div class="card proj reveal d2">
         <div class="head"><span class="pnum">PROJECT 06</span><span class="pill">Reliability</span></div>
         <h3>Production Incident Root-Cause Work</h3>
-        <p>Traced and fixed some tricky cross-system failures with AI-assisted diagnostics: EF navigation bugs, database replication hangs, secret-resolution edge cases, ingress SSL misconfigurations. Each fix went back into the knowledge base so it wouldn't bite us twice.</p>
+        <p>Traced and fixed tricky cross-system failures, often in .NET services I hadn't touched before: EF navigation bugs, database replication hangs, secret-resolution edge cases, ingress SSL misconfigurations. AI-assisted diagnostics helped me get to root cause fast, and each fix went back into the knowledge base so it wouldn't bite us twice.</p>
         <div class="metrics">
           <div><b>MTTR</b>reduced</div>
           <div><b>root</b>-cause first</div>
         </div>
-        <div class="stack"><span class="tag">debugging</span><span class="tag">SQL</span><span class="tag">K8s</span><span class="tag">networking</span></div>
+        <div class="stack"><span class="tag">.NET</span><span class="tag">SQL</span><span class="tag">K8s</span><span class="tag">networking</span></div>
       </div>
     </div>
   </section>
@@ -491,21 +507,33 @@
 
     <div class="projects-grid">
       <div class="card proj reveal">
-        <div class="head"><span class="pnum">SIDE 01</span><span class="pill">Personal · Full-stack</span></div>
+        <div class="head"><span class="pnum">SIDE 01</span><span class="pill">Product · .NET + React</span></div>
+        <h3>chkin.co.za — Digital Patient Intake</h3>
+        <p>I built the framework and system behind <a href="https://chkin.co.za" target="_blank" rel="noopener" style="color:var(--blue-bright);text-decoration:underline;text-underline-offset:2px">chkin.co.za</a> for its owner using AI, who's since taken it further and onboarded clients. It takes the pain out of seeing a doctor: instead of filling in the same paperwork over and over, you enter your details once in the app or website. Scan a QR code at a practice and it pulls up that practitioner's form, cross-references it against your data, and fills it in automatically. It also covers visit statistics, a saved history of your completed forms, and consent management between patients and their doctors — and lets practitioners build their own forms with a QR code generated on the app. Built with React + TypeScript and a C# / .NET backend on MySQL.</p>
+        <div class="metrics">
+          <div><b>live</b>with clients</div>
+          <div><b>QR</b>auto-fill</div>
+        </div>
+        <div class="stack"><span class="tag">C# / .NET</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">MySQL</span><span class="tag">AI-assisted</span></div>
+        <a href="https://chkin.co.za" target="_blank" rel="noopener" class="proj-link">Visit chkin.co.za <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="card proj reveal d1">
+        <div class="head"><span class="pnum">SIDE 02</span><span class="pill">Personal · Full-stack</span></div>
         <h3>Home Budget &amp; Meal App</h3>
         <p>My own budgeting app, built with Kiro and hosted on Vercel with a Firebase database. It tracks our spending and auto-generates meals from a meal list, with AI pulling recipes and drawing weekly and monthly price charts. I added Gmail sign-in so my sister and fiancé can use it too, since we all live together and share the budget. Its Requirement → Design → Tasks flow is exactly where I got the idea for the pipeline I now use at work.</p>
         <div class="stack"><span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Vercel</span><span class="tag">Kiro</span><span class="tag">Google Auth</span></div>
       </div>
 
-      <div class="card proj reveal d1">
-        <div class="head"><span class="pnum">SIDE 02</span><span class="pill">Personal · Web</span></div>
+      <div class="card proj reveal d2">
+        <div class="head"><span class="pnum">SIDE 03</span><span class="pill">Personal · Web</span></div>
         <h3>Wedding Website</h3>
         <p>Helped a friend put together a wedding website — everything from the layout to getting it live. A fun, low-stakes project that was mostly about making something people would actually enjoy using on the day.</p>
         <div class="stack"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">web hosting</span></div>
       </div>
 
-      <div class="card proj reveal d2">
-        <div class="head"><span class="pnum">SIDE 03</span><span class="pill">Personal · AI</span></div>
+      <div class="card proj reveal">
+        <div class="head"><span class="pnum">SIDE 04</span><span class="pill">Personal · AI</span></div>
         <h3>Home AI Experiments</h3>
         <p>In my own time I keep experimenting with AI on small home projects, including some home-remedy ideas. It's how I learn what these tools can and can't do before I trust them with anything real.</p>
         <div class="stack"><span class="tag">AI/LLMs</span><span class="tag">prototyping</span><span class="tag">curiosity</span></div>
@@ -530,10 +558,12 @@
         <h3>Junior Software Engineer</h3>
         <div class="org">Workplace — Enterprise ERP Platform</div>
         <ul>
-          <li>Work across full-stack development and DevOps on a large microservice estate.</li>
-          <li>Started and proof-of-concepted converting legacy Delphi software to React with AI, and took the Fulfilment Returns rebuild all the way to production.</li>
+          <li>Build and ship production features on C# / .NET across a large microservice ERP estate, plus full-stack React and the DevOps behind it.</li>
+          <li>Solo-built the Fulfilment despatch/returns rebuild with AI — a .NET backend over on-prem Omega SQL plus a React front end — taking a legacy Delphi flow to production and improving it tenfold.</li>
+          <li>Led the .NET backend integration for Credico, a third-party POS sales integration — work that earned our team the staff award for most innovative and success-driven team.</li>
+          <li>Delivered the TT1 debit-order mandate changes in our legacy C# call-centre system, moving mandates from a manual process to automated setup (~2 months).</li>
           <li>Helped migrate 80+ services to a new cloud with a dual-deployment model, reusable CI/CD, and rollback planning.</li>
-          <li>Built a suite of custom AI agent skills and a multi-agent delivery pipeline the team now uses.</li>
+          <li>Spearheaded AI adoption: built custom agent skills, a multi-agent delivery pipeline, and an internal knowledge site with governance and best practices the team now uses.</li>
         </ul>
       </div>
       <div class="tl-item reveal d1">
@@ -561,7 +591,7 @@
   <section id="contact" class="contact">
     <div class="eyebrow reveal" style="justify-content:center">Let's talk</div>
     <h2 class="reveal d1">Let's build something<br>intelligent together.</h2>
-    <p class="section-intro reveal d2" style="margin:0 auto 0;text-align:center">Open to software engineering roles and interesting projects, especially where AI, full-stack, and DevOps meet.</p>
+    <p class="section-intro reveal d2" style="margin:0 auto 0;text-align:center">Open to software engineering roles and interesting projects — especially C# / .NET, full-stack, and anywhere AI and DevOps meet.</p>
     <div class="contact-links reveal d2">
       <a href="mailto:bamitchellwork@gmail.com" class="btn btn-primary">bamitchellwork@gmail.com</a>
       <a href="tel:+27712358370" class="btn btn-ghost">071 235 8370</a>
@@ -581,9 +611,9 @@
       <div class="card reveal d1">
         <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.05rem;margin-bottom:14px">Quick facts</h3>
         <ul class="info-list">
-          <li><span>Focus</span><span>Full-stack + AI-assisted dev</span></li>
-          <li><span>Recently</span><span>Started on the DevOps platform</span></li>
-          <li><span>Currently</span><span>AWS &rarr; Huawei migration</span></li>
+          <li><span>Experience</span><span>2.5 years in software engineering</span></li>
+          <li><span>Core stack</span><span>C# / .NET, full-stack + AI</span></li>
+          <li><span>Fun fact</span><span>begin … end. — yes, that's a full statement</span></li>
           <li><span>I'm good at</span><span>Learning fast, adapting quickly</span></li>
         </ul>
       </div>
@@ -625,7 +655,7 @@
     }
 
     // Typing effect
-    const roles = ['Junior Software Engineer', 'Full-stack developer', 'Delphi → React, reimagined with AI', 'DevOps & cloud automation'];
+    const roles = ['Software Engineer', 'C# / .NET developer', 'Full-stack — React & TypeScript', 'Delphi → React, reimagined with AI', 'DevOps & cloud automation'];
     const typed = document.getElementById('typed');
     let ri = 0, ci = 0, deleting = false;
     function type() {
