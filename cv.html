@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bertus Mitchell — Curriculum Vitae</title>
+  <meta name="description" content="Curriculum Vitae of Bertus Mitchell, Junior Software Engineer — full-stack development, DevOps, and AI-assisted engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#05070d;
+      --paper:#0c1119;
+      --sidebar:#0a0f18;
+      --border:rgba(96,165,250,.16);
+      --text:#e7edf6;
+      --muted:#9fb0c9;
+      --dim:#6b7c96;
+      --blue:#3b82f6;
+      --blue-bright:#60a5fa;
+      --cyan:#22d3ee;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:var(--bg);color:var(--text);line-height:1.55;
+      -webkit-font-smoothing:antialiased;padding:34px 18px;
+    }
+
+    .toolbar{max-width:900px;margin:0 auto 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .toolbar a,.toolbar button{
+      font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;cursor:pointer;text-decoration:none;
+      padding:10px 18px;border-radius:10px;border:1px solid var(--border);
+      background:rgba(14,20,32,.6);color:var(--text);transition:.25s;
+    }
+    .toolbar button{background:linear-gradient(135deg,var(--blue),var(--blue-bright));border:none;color:#fff}
+    .toolbar a:hover{border-color:var(--blue-bright);color:var(--blue-bright)}
+    .toolbar button:hover{box-shadow:0 6px 24px rgba(59,130,246,.4)}
+    .toolbar .hint{color:var(--dim);font-size:.8rem}
+
+    .sheet{
+      max-width:900px;margin:0 auto;background:var(--paper);
+      border:1px solid var(--border);border-radius:16px;overflow:hidden;
+      display:grid;grid-template-columns:290px 1fr;
+      box-shadow:0 30px 80px rgba(0,0,0,.5);
+    }
+
+    /* ---- Sidebar ---- */
+    .side{background:var(--sidebar);padding:38px 26px;border-right:1px solid var(--border)}
+    .name{font-family:'Space Grotesk',sans-serif;font-size:1.7rem;font-weight:700;line-height:1.1;letter-spacing:-.5px}
+    .title{color:var(--blue-bright);font-size:.95rem;font-weight:600;margin-top:6px;margin-bottom:26px}
+    .side h3{
+      font-family:'Space Grotesk',sans-serif;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+      color:var(--cyan);margin:26px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--border);
+    }
+    .side h3:first-of-type{margin-top:0}
+    .contact-item{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--muted);margin-bottom:10px;word-break:break-word}
+    .contact-item svg{flex:0 0 auto;margin-top:2px}
+    .contact-item a{color:var(--muted);text-decoration:none}
+    .contact-item a:hover{color:var(--blue-bright)}
+    .edit{font-size:.62rem;font-weight:600;color:#f59e0b;border:1px solid rgba(245,158,11,.4);padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+
+    .skill-block{margin-bottom:16px}
+    .skill-block .lab{font-size:.78rem;font-weight:600;color:var(--text);margin-bottom:6px}
+    .chips{display:flex;flex-wrap:wrap;gap:6px}
+    .chip{font-size:.72rem;color:var(--blue-bright);background:rgba(59,130,246,.1);border:1px solid var(--border);padding:3px 9px;border-radius:6px}
+
+    .edu-item{margin-bottom:14px;font-size:.85rem}
+    .edu-item .deg{font-weight:600;color:var(--text)}
+    .edu-item .org{color:var(--muted)}
+    .edu-item .yr{color:var(--dim);font-size:.78rem}
+    .note{font-size:.8rem;color:var(--dim);font-style:italic;margin-top:8px}
+
+    /* ---- Main ---- */
+    .main{padding:38px 34px}
+    .main .section{margin-bottom:28px}
+    .main .section:last-child{margin-bottom:0}
+    .main h2{
+      font-family:'Space Grotesk',sans-serif;font-size:1.05rem;letter-spacing:1px;text-transform:uppercase;
+      color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:12px;
+    }
+    .main h2::after{content:"";flex:1;height:1px;background:var(--border)}
+    .summary{color:var(--muted);font-size:.93rem}
+
+    .role{margin-bottom:20px}
+    .role:last-child{margin-bottom:0}
+    .role .rtop{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px}
+    .role .pos{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.02rem}
+    .role .date{font-size:.78rem;color:var(--cyan);font-weight:500;white-space:nowrap}
+    .role .org{color:var(--blue-bright);font-size:.88rem;font-weight:500;margin-bottom:8px}
+    .role ul{list-style:none;margin-top:6px}
+    .role li{position:relative;padding-left:18px;font-size:.88rem;color:var(--muted);margin-bottom:5px}
+    .role li::before{content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+
+    .proj-line{margin-bottom:12px;font-size:.88rem}
+    .proj-line .pt{font-weight:600;color:var(--text)}
+    .proj-line .pd{color:var(--muted)}
+
+    footer{max-width:900px;margin:18px auto 0;text-align:center;color:var(--dim);font-size:.78rem}
+
+    /* ---- Responsive ---- */
+    @media(max-width:720px){
+      .sheet{grid-template-columns:1fr}
+      .side{border-right:none;border-bottom:1px solid var(--border)}
+    }
+
+    /* ---- Print (clean A4 PDF) ---- */
+    @media print{
+      @page{margin:12mm}
+      body{background:#fff;color:#111;padding:0}
+      .toolbar,footer{display:none!important}
+      .sheet{max-width:100%;border:none;border-radius:0;box-shadow:none;background:#fff;grid-template-columns:270px 1fr}
+      .side{background:#f4f7fb;border-right:1px solid #d7dee8}
+      .main{padding:26px 28px}
+      .name{color:#0b1220}
+      .title{color:#1d4ed8}
+      .side h3{color:#1d4ed8;border-color:#d7dee8}
+      .summary,.role li,.contact-item,.contact-item a,.edu-item .org,.proj-line .pd{color:#333!important}
+      .role .org,.chip{color:#1d4ed8!important}
+      .role .date{color:#555!important}
+      .chip{background:#eef3fb;border-color:#d7dee8}
+      .main h2{color:#0b1220}
+      .main h2::after,.side h3{border-color:#d7dee8}
+      .role li::before,.role .pos,.pos{color:#0b1220}
+      .edit{display:none!important}
+      *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="index.html">&larr; Back to portfolio</a>
+    <span class="hint">Press the button (or Ctrl / Cmd + P) to save as PDF</span>
+    <button onclick="window.print()">Download / Print PDF</button>
+  </div>
+
+  <div class="sheet">
+    <!-- SIDEBAR -->
+    <aside class="side">
+      <div class="name">Bertus Mitchell</div>
+      <div class="title">Junior Software Engineer</div>
+
+      <h3>Contact</h3>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" width="15" height="15" style="fill:none;stroke:#60a5fa;stroke-width:1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <a href="mailto:bamitchellwork@gmail.com">bamitchellwork@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" width="15" height="15" style="fill:none;stroke:#60a5fa;stroke-width:1.7"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+        <a href="tel:+27712358370">071 235 8370</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" width="15" height="15" style="fill:none;stroke:#60a5fa;stroke-width:1.7"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span>Cape Town</span>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" width="15" height="15" style="fill:none;stroke:#60a5fa;stroke-width:1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4"/></svg>
+        <a href="https://www.linkedin.com/in/bertus-mitchel-b4ab7a1b7" target="_blank" rel="noopener">linkedin.com/in/bertus-mitchel</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24" width="15" height="15" style="fill:none;stroke:#60a5fa;stroke-width:1.7"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.3 1.3a11 11 0 0 0-6 0C6.4 1.8 5.4 2.1 5.4 2.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 8.5c0 4.6 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3V21"/></svg>
+        <a href="https://github.com/Oom-Lars" target="_blank" rel="noopener">github.com/Oom-Lars</a>
+      </div>
+
+      <h3>Technical Skills</h3>
+      <div class="skill-block">
+        <div class="lab">Languages &amp; Frameworks</div>
+        <div class="chips">
+          <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span>
+          <span class="chip">C# / .NET</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Python</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="lab">AI &amp; Automation</div>
+        <div class="chips">
+          <span class="chip">Claude Code</span><span class="chip">Agent / skill design</span><span class="chip">Multi-agent orchestration</span>
+          <span class="chip">Prompt &amp; context engineering</span><span class="chip">AI-assisted conversion</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="lab">DevOps &amp; Cloud</div>
+        <div class="chips">
+          <span class="chip">AWS EKS</span><span class="chip">Huawei CCE</span><span class="chip">Kubernetes</span>
+          <span class="chip">Helm</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="lab">Data &amp; Systems</div>
+        <div class="chips">
+          <span class="chip">SQL / MySQL</span><span class="chip">Firebase</span><span class="chip">nginx ingress</span>
+          <span class="chip">Keycloak / OIDC</span><span class="chip">WordPress</span><span class="chip">Hosting &amp; domains</span>
+        </div>
+      </div>
+
+      <h3>Education</h3>
+      <div class="edu-item">
+        <div class="deg">Tertiary studies <span class="edit">BSC in Informatics</span></div>
+        <div class="org">University of South Africa (UNISA)</div>
+        <div class="yr">Completed to third year</div>
+      </div>
+      <div class="edu-item">
+        <div class="deg">National Senior Certificate (Matric)</div>
+        <div class="org"><span class="edit">Highschool Swartland</span></div>
+      </div>
+      <p class="note">Largely self-taught — most of my skills were built hands-on and on the job.</p>
+
+      <h3>Courses</h3>
+      <div class="edu-item">
+        <div class="deg">React – The Complete Guide 2023</div>
+        <div class="org">Academind (Maximilian Schwarzmüller) · Udemy</div>
+        <div class="yr">incl. React Router &amp; Redux</div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="section">
+        <h2>Profile</h2>
+        <p class="summary">Junior Software Engineer with a full-stack background and a growing focus on applying AI to real engineering work. Comfortable across the stack — C#/.NET and SQL, learning React/TypeScript with AI — and increasingly across DevOps and cloud, including AWS, Huawei Cloud, Kubernetes and CI/CD. I pick things up quickly, adapt easily to new tools and domains, and get productive fast. Most of my growth has come from solving real problems on the job rather than from a classroom.</p>
+      </div>
+
+      <div class="section">
+        <h2>Experience</h2>
+
+        <div class="role">
+          <div class="rtop">
+            <span class="pos">Junior Software Engineer</span>
+            <span class="date">Nov 2023 – Present</span>
+          </div>
+          <div class="org">Enterprise ERP Platform · Cape Town · Full-time</div>
+          <ul>
+            <li>Full-stack development and DevOps across a large microservice ERP estate.</li>
+            <li>Started and proof-of-concepted an AI-driven approach to convert legacy Delphi applications into modern React; delivered the Fulfilment Returns rebuild end-to-end into production, improving functionality and maintainability significantly.</li>
+            <li>Contributed to migrating 80+ services from AWS EKS to Huawei Cloud (CCE) using a dual-deployment model with reusable CI/CD workflows, image mirroring, ingress and DNS cutover, and rollback planning.</li>
+            <li>Built a suite of custom AI agent skills and a multi-agent development pipeline (research &rarr; code &rarr; review &rarr; documentation) now used by the team.</li>
+            <li>Diagnosed and resolved complex production incidents across databases, Kubernetes and networking, recording each fix as reusable knowledge.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="rtop">
+            <span class="pos">Web Developer</span>
+            <span class="date">Oct 2022 – Nov 2023</span>
+          </div>
+          <div class="org">M2Bio Sciences, Inc. · Full-time</div>
+          <ul>
+            <li>Developed and maintained websites using PHP, HTML and CSS.</li>
+            <li>Managed WordPress sites, web hosting and domain configuration.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="rtop">
+            <span class="pos">Waiter</span>
+            <span class="date">Jan 2021 – Sep 2022</span>
+          </div>
+          <div class="org">Bootlegger Coffee Company</div>
+          <ul>
+            <li>Delivered fast-paced front-of-house service; built strong communication, adaptability and composure under pressure.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Selected Projects</h2>
+        <div class="proj-line"><span class="pt">Delphi &rarr; React Modernisation (flagship).</span> <span class="pd">Initiated and proof-of-concepted converting legacy Delphi software to React with AI; delivered the Fulfilment Returns rebuild into production.</span></div>
+        <div class="proj-line"><span class="pt">AI Automation Skill Suite.</span> <span class="pd">A set of custom agent skills that encode team standards and automate high-volume platform work such as Kubernetes-to-Helm conversion, scaffolding and workflow generation.</span></div>
+        <div class="proj-line"><span class="pt">Enterprise Dual-Cloud Migration.</span> <span class="pd">Helped move an ERP estate from AWS EKS to Huawei Cloud with reusable workflows, image mirroring and DNS/TLS cutover across 80+ repositories.</span></div>
+        <div class="proj-line"><span class="pt">Multi-Agent Development Pipeline.</span> <span class="pd">A spec-driven pipeline where research, coding, review and documentation agents hand off in sequence with human review at the diff level.</span></div>
+        <div class="proj-line"><span class="pt">Automated Documentation Platform.</span> <span class="pd">An AI-driven system that generates architecture, module and runbook docs from a service's current state and keeps them in sync through CI.</span></div>
+      </div>
+    </main>
+  </div>
+
+  <footer>Bertus Mitchell — Curriculum Vitae · Update the fields marked EDIT before sending.</footer>
+</body>
+</html>
